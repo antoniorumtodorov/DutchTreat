@@ -1,0 +1,7 @@
+.vs
+obj
+appsettings.Development.json
+bin
+WorkDistributionTool.csproj.user
+node_modules
+package-lock.json

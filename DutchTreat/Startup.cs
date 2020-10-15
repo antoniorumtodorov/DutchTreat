@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using System.Security.Policy;
 
 namespace DutchTreat
 {
@@ -18,10 +19,10 @@ namespace DutchTreat
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
-            app.Run(async context =>
-            {
-                await context.Response.WriteAsync("Hello World");
-            });
+            
+           app.UseDefaultFiles();
+            app.UseStaticFiles();
+            
         }
     }
 }
